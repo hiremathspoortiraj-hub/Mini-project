@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">✦ CampusConnect</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu ☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html">Register</a>
+      <a href="manage.html">Manage Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-intro">
+    <span class="eyebrow" style="color:var(--green)">We're here to help</span>
+    <h1>Contact the event team</h1>
+    <p class="muted">Have a question about an event? Send us a message.</p>
+  </section>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start">
+    <section class="panel">
+      <h2>Send a message</h2>
+      <div id="contact-message" class="notice hidden" role="status"></div>
+      <form id="contact-form">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" required maxlength="100"></div>
+        <div class="field" style="margin-top:14px"><label for="email">Email address *</label><input id="email" name="email" type="email" required maxlength="100"></div>
+        <div class="field" style="margin-top:14px"><label for="message">Message *</label><textarea id="message" name="message" rows="5" required maxlength="3000"></textarea></div>
+        <div class="form-actions"><button type="submit">Send Message</button></div>
+      </form>
+    </section>
+    <section class="card">
+      <div class="icon-tile">✉</div>
+      <h2>College event support</h2>
+      <p>For event schedules, registration questions and participation details, contact your college event coordinator.</p>
+      <p><strong>Email:</strong><br>events@yourcollege.edu</p>
+      <p><strong>Office hours:</strong><br>Monday–Friday, 9:00 AM–4:00 PM</p>
+      <p class="muted">Replace the sample contact details with your college's official information.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 CampusConnect · College Event Management System</span>
+    <span>Plan. Participate. Celebrate.</span>
+  </div>
+</footer>
+</body>
+</html>

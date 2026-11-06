@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">✦ CampusConnect</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu ☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html">Register</a>
+      <a href="manage.html">Manage Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-intro">
+    <span class="eyebrow" style="color:var(--green)">Explore and participate</span>
+    <h1>College events</h1>
+    <p class="muted">Search by event name or filter by branch and category.</p>
+  </section>
+  <section>
+    <div class="toolbar">
+      <div><label for="search">Search events</label><input id="search" type="search" placeholder="Try CodeFest or music..."></div>
+      <div><label for="branch-filter">Branch</label><select id="branch-filter"><option value="">All branches</option><option>CSE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option><option>IT</option><option>All Branches</option></select></div>
+      <div><label for="category-filter">Category</label><select id="category-filter"><option value="">All categories</option><option>Technical</option><option>Cultural</option><option>Sports</option><option>Workshop</option><option>Entrepreneurship</option></select></div>
+      <div style="display:flex;align-items:end;gap:8px"><button id="apply-filters" type="button">Search</button><button id="reset-filters" class="secondary" type="button">Reset</button></div>
+    </div>
+    <div class="cards" id="events-list"><div class="empty-state">Loading events...</div></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 CampusConnect · College Event Management System</span>
+    <span>Plan. Participate. Celebrate.</span>
+  </div>
+</footer>
+</body>
+</html>

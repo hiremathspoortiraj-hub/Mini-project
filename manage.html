@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Events | College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">✦ CampusConnect</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu ☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html">Register</a>
+      <a href="manage.html">Manage Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-intro">
+    <span class="eyebrow" style="color:var(--green)">Event coordinator area</span>
+    <h1>Manage events</h1>
+    <p class="muted">Create events, update details, remove events and review registrations.</p>
+    <div class="notice">Demo note: this page is not password-protected yet. Use it locally only until admin login and authorization are added.</div>
+  </section>
+
+  <section class="panel">
+    <h2>Add or edit an event</h2>
+    <div id="manage-message" class="notice hidden" role="status"></div>
+    <form id="event-form">
+      <input type="hidden" id="event_id">
+      <div class="form-grid">
+        <div class="field"><label for="event_name">Event name *</label><input id="event_name" required maxlength="100"></div>
+        <div class="field"><label for="event_branch">Branch *</label><select id="event_branch" required><option value="">Choose branch</option><option>CSE</option><option>ECE</option><option>EEE</option><option>IT</option><option>Mechanical</option><option>Civil</option><option>All Branches</option></select></div>
+        <div class="field"><label for="event_category">Category</label><select id="event_category"><option value="">Choose category</option><option>Technical</option><option>Cultural</option><option>Sports</option><option>Workshop</option><option>Entrepreneurship</option></select></div>
+        <div class="field"><label for="event_date">Date</label><input id="event_date" type="date"></div>
+        <div class="field full"><label for="event_venue">Venue</label><input id="event_venue" maxlength="100"></div>
+        <div class="field full"><label for="event_description">Description</label><textarea id="event_description" rows="3"></textarea></div>
+      </div>
+      <div class="form-actions"><button id="save-event" type="submit">Add Event</button><button id="cancel-edit" class="secondary hidden" type="button">Cancel edit</button></div>
+    </form>
+  </section>
+
+  <section class="section" style="padding-bottom:20px">
+    <div class="section-heading"><div><h2>Current events</h2><p class="muted">These records come from your MySQL database.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>ID</th><th>Event</th><th>Branch</th><th>Category</th><th>Date</th><th>Actions</th></tr></thead><tbody id="manage-events-body"><tr><td colspan="6">Loading...</td></tr></tbody></table></div>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="section-heading"><div><h2>Student registrations</h2><p class="muted">Students registered for each event.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Reg. ID</th><th>Student</th><th>Roll number</th><th>Branch</th><th>Event</th><th>Email</th></tr></thead><tbody id="registrations-body"><tr><td colspan="6">Loading...</td></tr></tbody></table></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 CampusConnect · College Event Management System</span>
+    <span>Plan. Participate. Celebrate.</span>
+  </div>
+</footer>
+</body>
+</html>

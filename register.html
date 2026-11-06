@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">✦ CampusConnect</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu ☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html">Register</a>
+      <a href="manage.html">Manage Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-intro">
+    <span class="eyebrow" style="color:var(--green)">Save your seat</span>
+    <h1>Event registration</h1>
+    <p class="muted">Enter your details and choose the event you want to attend.</p>
+  </section>
+  <section class="panel" style="max-width:820px;margin:0 auto">
+    <div id="registration-message" class="notice hidden" role="status"></div>
+    <form id="registration-form">
+      <div class="form-grid">
+        <div class="field"><label for="student_name">Full name *</label><input id="student_name" name="student_name" required maxlength="100"></div>
+        <div class="field"><label for="roll_number">Roll number *</label><input id="roll_number" name="roll_number" required maxlength="30"></div>
+        <div class="field"><label for="branch">Branch *</label><select id="branch" name="branch" required><option value="">Choose branch</option><option>CSE</option><option>ECE</option><option>EEE</option><option>IT</option><option>Mechanical</option><option>Civil</option><option>Other</option></select></div>
+        <div class="field"><label for="year_of_study">Year of study</label><select id="year_of_study" name="year_of_study"><option value="">Choose year</option><option value="1">1st year</option><option value="2">2nd year</option><option value="3">3rd year</option><option value="4">4th year</option></select></div>
+        <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required maxlength="100"></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" maxlength="15"></div>
+        <div class="field full"><label for="event_id">Select event *</label><select id="event_id" name="event_id" required><option value="">Loading events...</option></select></div>
+      </div>
+      <div class="form-actions"><button type="submit">Submit Registration</button><a class="button secondary" href="events.html">Browse Events</a></div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 CampusConnect · College Event Management System</span>
+    <span>Plan. Participate. Celebrate.</span>
+  </div>
+</footer>
+</body>
+</html>

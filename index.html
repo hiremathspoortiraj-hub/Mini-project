@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">✦ CampusConnect</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu ☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html">Register</a>
+      <a href="manage.html">Manage Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Your campus, your community</span>
+        <h1>Make college life more memorable.</h1>
+        <p>Discover technical fests, cultural celebrations, workshops and student activities—all in one place.</p>
+        <div class="actions">
+          <a class="button" href="events.html">Explore Events →</a>
+          <a class="button secondary" href="register.html">Register Now</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <span class="art-pill">CAMPUS EVENTS</span>
+        <div>
+          <div class="art-number" id="event-count">—</div>
+          <h3>Events to explore</h3>
+          <p>Find your next opportunity to learn, create and connect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div><span class="eyebrow" style="color:var(--green)">What's happening</span><h2>Featured events</h2><p class="muted">Explore events currently listed by your college.</p></div>
+        <a class="button secondary" href="events.html">View all events</a>
+      </div>
+      <div class="cards" id="featured-events"><div class="empty-state">Loading events...</div></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#eaf6ef">
+    <div class="container">
+      <div class="section-heading"><div><h2>Find your place on campus</h2><p class="muted">A simple way to discover and join activities.</p></div></div>
+      <div class="cards">
+        <article class="card"><div class="icon-tile">⌘</div><h3>Technical events</h3><p>Hackathons, coding contests, project expos and workshops.</p><a class="button secondary" href="events.html?category=Technical">Explore events</a></article>
+        <article class="card"><div class="icon-tile">♫</div><h3>Cultural events</h3><p>Celebrate music, dance, arts and college traditions.</p><a class="button secondary" href="events.html?category=Cultural">Explore events</a></article>
+        <article class="card"><div class="icon-tile">◎</div><h3>Open to everyone</h3><p>Find events for your branch or events open to all branches.</p><a class="button secondary" href="events.html">Browse all</a></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 CampusConnect · College Event Management System</span>
+    <span>Plan. Participate. Celebrate.</span>
+  </div>
+</footer>
+</body>
+</html>
